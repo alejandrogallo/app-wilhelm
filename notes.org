@@ -1,0 +1,144 @@
+* מִילים על מדעי המחשֶב בעברית
+
+- Variable :: מִשְתַנֶה
+- Function :: פונקציָה
+- String :: מַחְרוֹזֶת
+- List or array :: רשׁימָה
+- Class :: מַחלָקָה
+- Program :: תוכנית  
+
+* עֶזרָה בּ-js
+
+זה חשוב מאוד להִיות מסגל לחפּש עֶזרָה
+בּאינטרנט, כמה עמודים טובים:
+
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+- https://javascript.info/document
+- https://www.w3schools.com/js/DEFAULT.asp
+
+* איפה התכנית בּ-js חי? בּדף HTML
+
+השפה HTML היא קלה מאוד.
+הבּסיס הוא יש שם של מושַׂא וחיבים לכתוב את ההתחלה
+ואת הסוף בּאֶמצָות של TAG.
+
+למשל השם p כדי לכתוב פִּסקָה (בּאנגלית paragraph)
+אנחנו כותבים
+
+#+begin_src html
+<p>
+  זה התוכן של פִּסקָה שלי
+</p>
+#+end_src
+
+המִבְנֶה הכּללי של משמך html זה
+
+#+begin_src html
+<html>
+
+   <head>
+     <title>
+       Title!!!
+     </title>
+   </head>
+
+   <body>
+     ...
+   </body>
+
+</html>
+
+#+end_src
+
+ואתה שואל את עצמך, למה זה חשוב בּהתחשב בּ-js?
+כּי בּדרך כּלל, כּל תכניֹות שנכתבות בּ-js
+תמיד נמצות בּפנים TAG בּשם =script=.
+
+למשל הפונקציה =alert= אומרת צורחת למשתמש.
+
+#+begin_src html
+
+<script>
+  alert("hello world");
+</script>
+
+#+end_src
+
+דפדפן :: browser
+
+#+begin_src html :tangle example1.html
+<html>
+  <head>
+    <title>
+      Example 1
+    </title>
+  </head>
+  <body>
+
+    <h1>
+      Celsius to Kelvin Converter
+    </h1>
+
+    <input type="number"
+           value="54"
+           id="celsius">
+    <input type="number"
+           id="kelvin">
+    <button
+      onclick="celsius_to_kelvin()">
+      Convert!!!
+    </button>
+
+    <script>
+      function celsius_to_kelvin () {
+        var celsius_el = document.getElementById("celsius");
+        var kelvin_el = document.getElementById("kelvin");
+        console.log("This is celsius_el", celsius_el);
+        console.log(kelvin_el.value);
+        kelvin_el.value = parseFloat(celsius_el.value) + 273;
+      }
+    </script>
+
+
+  </body>
+</html>
+#+end_src
+
+
+
+* דוגמות בּ-js
+
+hello world my name is Alejandro
+#+begin_src js
+return 5;
+#+end_src
+
+#+RESULTS:
+: 5
+
+
+* אירועים ב-javascript 
+
+| תיאור                            | אירוע       |
+|----------------------------------+-------------|
+| בעתמע טעינה                      | onload      |
+| בעת לחיצה                        | onclick     |
+| בעת סגירת דף                     | onabort     |
+| בעת סגירת חלון                   | Onunload    |
+| בעת יציאה מפוקוס                 | Onblur      |
+| בעת שינוי אובייקט                | onchange    |
+| בעת בחירה                        | onselect    |
+| בעת שליחת טופס                   | onsubmit    |
+| בעת שגיאה                        | onerror     |
+| בעת מעבר עכבר                    | onmouseover |
+| בעת עזיבת סימן העכבר את האובייקט | onmouseout  |
+
+
+* משתנים קִשור ל-EMACS
+# Local Variables:
+# sentence-end-double-space: nil
+# bidi-display-reordering: t
+# bidi-paragraph-direction: nil
+# coding: utf-8
+# org-confirm-babel-evaluate: nil
+# End:

@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>
+      Example 1
+    </title>
+  </head>
+  <body>
+
+    <h1>
+      Celsius to Kelvin Converter
+    </h1>
+
+    <input type="number"
+           value="54"
+           id="celsius">
+    <input type="number"
+           id="kelvin">
+    <button
+      onclick="celsius_to_kelvin()">
+      Convert!!!
+    </button>
+
+    <script>
+      function celsius_to_kelvin () {
+        var celsius_el = document.getElementById("celsius");
+        var kelvin_el = document.getElementById("kelvin");
+        console.log("This is celsius_el", celsius_el);
+        console.log(kelvin_el.value);
+        kelvin_el.value = parseFloat(celsius_el.value) + 273;
+      }
+    </script>
+
+
+  </body>
+</html>
