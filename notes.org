@@ -66,6 +66,8 @@
 
 דפדפן :: browser
 
+** דגמה 1: אמרה C -> K 
+
 #+begin_src html :tangle example1.html
 <html>
   <head>
@@ -104,17 +106,6 @@
 </html>
 #+end_src
 
-
-
-* דוגמות בּ-js
-
-hello world my name is Alejandro
-#+begin_src js
-return 5;
-#+end_src
-
-#+RESULTS:
-: 5
 
 
 * אירועים ב-javascript 
